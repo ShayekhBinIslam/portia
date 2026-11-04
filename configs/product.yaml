@@ -1,0 +1,15 @@
+# The live app and the static gallery (product/).
+
+library_shards: [shard3_15pct, shard4_20pct]          # development shards only; held-out shards are never offered
+featured: [shard3_15pct_027, shard3_15pct_018, shard3_15pct_041, shard4_20pct_107, shard4_20pct_109, shard4_20pct_059]
+demo_job: "1102-120834-5a94"             # the home page's replay: case 038, three agents read the wrong notebook page
+showcase: ["1030-064048-0741", "1103-034653-7b39", "1104-151224-a5ab"]   # recorded runs of new questions
+upload_demo_job: "1104-151224-a5ab"      # Tears of Steel (CC BY 3.0), transcribed by Muse Voice Transcribe
+
+limits:
+  max_jobs: 2                            # PORTIA_MAX_JOBS: live runs at once
+  max_pending: 12                        # PORTIA_MAX_PENDING: unfinished runs at once (each waits for a GPU slot)
+  max_batch: 100                         # PORTIA_MAX_BATCH: items in one batch audit
+  max_upload_mb: 1536                    # PORTIA_MAX_UPLOAD_MB
+
+clip_font: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf   # the evidence clips' captions

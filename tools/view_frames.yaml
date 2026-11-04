@@ -1,0 +1,16 @@
+# view_frames: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: view_frames
+description: >-
+  Look at a segment: returns n frames spread across its 30 seconds as images. Use it to check visual claims (who,
+  what object, which action, what is written on screen).
+parameters:
+  type: object
+  properties:
+    handle:
+      type: string
+    n:
+      type: integer
+      minimum: 1
+      maximum: 6
+      description: Frames to sample (default 4).
+  required: [handle]

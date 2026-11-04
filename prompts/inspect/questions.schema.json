@@ -1,0 +1,15 @@
+{
+ "type": "object",
+ "properties": {
+  "questions": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "maxItems": 6
+  }
+ },
+ "required": [
+  "questions"
+ ]
+}

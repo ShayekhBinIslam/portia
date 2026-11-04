@@ -1,0 +1,1 @@
+{"better": "B", "pair": "two edited versions (fewer vs more changes)", "changes": [{"answer": "B", "worse": false, "what": "Misidentifying the collar color as navy blue", "kind": "Visual Pattern Precision"}, {"answer": "A", "worse": true, "what": "Altering the orientation of the mug stripes and the collar color", "kind": "Visual Pattern Precision"}]}

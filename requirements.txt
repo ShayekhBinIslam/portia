@@ -1,0 +1,17 @@
+# the server, the pipeline and the agents (Python 3.11); Muse Glimmer itself is served by vLLM (requirements-muse.txt)
+fastapi
+uvicorn
+sse-starlette
+python-multipart
+pydantic>=2
+numpy
+pillow
+requests
+jinja2
+pyyaml
+decord
+safetensors
+huggingface_hub
+# the search encoder (scripts/local_encoder.py)
+torch
+transformers

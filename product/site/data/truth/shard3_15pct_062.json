@@ -1,0 +1,1 @@
+{"better": "A", "pair": "two edited versions (fewer vs more changes)", "changes": [{"answer": "A", "worse": false, "what": "Text rendering style", "kind": "Visual Detail Accuracy"}, {"answer": "B", "worse": true, "what": "Color of seals", "kind": "Visual Detail Accuracy"}, {"answer": "B", "worse": true, "what": "Parasite appearance", "kind": "Visual Detail Accuracy"}]}

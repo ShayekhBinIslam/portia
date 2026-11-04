@@ -1,0 +1,26 @@
+# Which tools each toolset offers, in the order the model sees them (judge/prompting.py).
+# v1: the first toolset. v2: + search_video, contact_sheet, zoom (also used by v3 and v4). v5: + burst.
+# variants: alternative descriptions. zoom.hires is used with --zoom-side != 1024 (toolsets v1-v4);
+# zoom.v5 is always used in toolset v5.
+toolsets:
+  v1: [search, grep_transcripts, read_transcript, view_frames, list_videos, answer]
+  v2: [search, grep_transcripts, read_transcript, view_frames, list_videos, search_video, contact_sheet, zoom, answer]
+  v5: [search, grep_transcripts, read_transcript, view_frames, list_videos, search_video, contact_sheet, zoom, burst,
+    answer]
+  # plan 004's adjudicator (judge/adjudicate.py): look-only tools, no search; it re-checks the moments the
+  # investigators cite instead of starting a new investigation
+  adj: [zoom, burst, contact_sheet, view_frames, read_transcript, answer]
+  # plan 010: the same adjudicator may also search when the investigators' looks miss a disputed detail
+  adj_search: [zoom, burst, contact_sheet, view_frames, read_transcript, search_video, search, grep_transcripts, answer]
+variants:
+  zoom:
+    hires: >-
+      Look closely at ONE exact moment: the frame at time t, cropped to a region (or a box) and enlarged to about
+      1800 px, much sharper than view_frames' 448 px thumbnails. region full shows the whole scene; for anything
+      small (text, numbers, symbols, small objects, counting, who is where) pick the region or box that contains
+      it: a quarter of the frame comes back magnified about 2.5x. Counts as one image.
+    v5: >-
+      Look closely at ONE exact moment: the frame at time t cropped to a region (or a box) and enlarged, shown NEXT
+      TO the whole frame with the crop outlined, so you see both the detail and where it sits in the scene. For
+      small things (text, numbers, symbols, small objects) pick the region or box that contains them; region full
+      returns the whole frame at full source resolution. Counts as one image.

@@ -1,0 +1,4 @@
+#### {{ label }}{% if own %} (your earlier report){% endif %}
+Verdict: answer {{ verdict }} is better.
+Rationale: {{ rationale }}
+{% if labels %}Images this investigator looked at, attached below in order: {{ labels | join("; ") }}.{% else %}This investigator kept no close look at the moments it cites.{% endif %}

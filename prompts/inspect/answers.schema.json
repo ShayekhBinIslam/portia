@@ -1,0 +1,30 @@
+{
+ "type": "object",
+ "properties": {
+  "answers": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "q": {
+      "type": "integer"
+     },
+     "visible": {
+      "type": "boolean"
+     },
+     "answer": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "q",
+     "visible",
+     "answer"
+    ]
+   }
+  }
+ },
+ "required": [
+  "answers"
+ ]
+}

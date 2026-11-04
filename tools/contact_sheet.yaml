@@ -1,0 +1,22 @@
+# contact_sheet: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: contact_sheet
+description: >-
+  Scan a stretch of one video at a glance: ONE image tiling n frames (default 12, max 20) spread evenly from start
+  to end (at most 15 minutes), each tile stamped with its time. Use it to find the exact moment a described scene,
+  object or on-screen text appears, then zoom in. Counts as one image.
+parameters:
+  type: object
+  properties:
+    video:
+      type: string
+      description: An 11-character video id, or a segment handle 'id@seconds'.
+    start: &id001
+      type: string
+      description: >-
+        Time in the video, absolute, as the other tools print it: 'mm:ss', 'h:mm:ss' or seconds.
+    end: *id001
+    n:
+      type: integer
+      minimum: 4
+      maximum: 20
+  required: [video, start, end]

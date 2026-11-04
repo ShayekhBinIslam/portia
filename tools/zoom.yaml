@@ -1,0 +1,29 @@
+# zoom: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: zoom
+description: >-
+  Look closely at ONE exact moment at full source resolution (view_frames shows small 448 px thumbnails): the frame
+  at time t, cropped to a region and enlarged. Use it to verify fine visual details: colours, small objects, symbols,
+  on-screen text and numbers, positions, clothing. Counts as one image.
+parameters:
+  type: object
+  properties:
+    video:
+      type: string
+      description: An 11-character video id, or a segment handle 'id@seconds'.
+    t:
+      type: string
+      description: >-
+        Time in the video, absolute, as the other tools print it: 'mm:ss', 'h:mm:ss' or seconds.
+    region:
+      type: string
+      enum: [full, center, top, bottom, left, right, top-left, top-right, bottom-left, bottom-right]
+      description: 'Part of the frame to enlarge (default full: the whole frame, sharper).'
+    box:
+      type: array
+      items:
+        type: number
+      minItems: 4
+      maxItems: 4
+      description: >-
+        Instead of region: [x0, y0, x1, y1] as fractions (0-1) of the frame width and height.
+  required: [video, t]

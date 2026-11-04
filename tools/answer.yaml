@@ -1,0 +1,14 @@
+# answer: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: answer
+description: >-
+  Give the final verdict. Call exactly once, when the evidence is enough to decide.
+parameters:
+  type: object
+  properties:
+    verdict:
+      type: string
+      enum: [A, B]
+    rationale:
+      type: string
+      description: '2-4 sentences: the decisive evidence (cite handles).'
+  required: [verdict, rationale]

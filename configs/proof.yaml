@@ -1,0 +1,16 @@
+# The runs behind the Proof page: per triple of investigator seeds, the three investigator runs and the Glimmer
+# evidence-only adjudications of their splits (proof_triples), and the triples with Muse Spark 1.3 checking every
+# verdict (check_triples). Run names are folders in runs/ (with _s3 and _s4 for the two development shards).
+
+proof_triples:
+  t012: [[mg_v4t, mg_v4t_r1, mg_v4t_r2], [mg_adjev, mg_adjev_r1, mg_adjev_r2, mg_adjev_r3, mg_adjev_r4]]
+  t234: [[mg_v4t_r2, mg_v4t_r3, mg_v4t_r4], [mg_adjev_t234, mg_adjev_t234_r1, mg_adjev_t234_r2]]
+  t345: [[mg_v4t_r3, mg_v4t_r4, mg_v4t_r5], [mg_adjev_t345, mg_adjev_t345_r1, mg_adjev_t345_r2]]
+  t567: [[mg_v4t_r5, mg_v4t_r6, mg_v4t_r7], [mg_adjev_t567, mg_adjev_t567_r1, mg_adjev_t567_r2]]
+  t8910: [[mg_v4t_r8, mg_v4t_r9, mg_v4t_r10], [mg_adjev_t8910, mg_adjev_t8910_r1, mg_adjev_t8910_r2]]
+
+check_triples:                           # in this order (the Proof page lists them so)
+  t012: [mg_v4t, mg_v4t_r1, mg_v4t_r2]
+  t567: [mg_v4t_r5, mg_v4t_r6, mg_v4t_r7]
+  t8910: [mg_v4t_r8, mg_v4t_r9, mg_v4t_r10]
+  t345: [mg_v4t_r3, mg_v4t_r4, mg_v4t_r5]

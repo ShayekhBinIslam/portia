@@ -1,0 +1,32 @@
+# keys and machine-specific settings
+.env
+*.env
+!.env.example
+paths.local.json
+product/public.env
+product/.tunnel_token
+meta_hackathon/meta_hack.env
+meta_hackathon/.meta_locked
+# runs, caches and media (never redistributed)
+/runs/
+/.cache/
+/logs/
+/data/
+/pod/
+product/jobs/*/img/
+product/collections/
+product/site/media/*
+!product/site/media/1104-151224-a5ab/
+product/video/audio/
+product/video/build/
+product/video/out/
+*.mp4
+*.webm
+*.wav
+*.npy
+*.npz
+# the one uploaded film that may be shared: Tears of Steel (CC BY 3.0), its frames and evidence clip
+!product/site/media/1104-151224-a5ab/**
+__pycache__/
+*.pyc
+.venv*/

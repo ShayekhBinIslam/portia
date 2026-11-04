@@ -1,0 +1,1 @@
+{% if v2 %}Images from your tool calls, in order: {% else %}Frames requested by your view_frames call(s), in order: {% endif %}{{ labels | join(", ") }}{% if note %}. {{ note }}{% endif %}

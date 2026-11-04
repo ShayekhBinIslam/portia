@@ -1,0 +1,1 @@
+{"better": "A", "pair": "original vs edited", "changes": [{"answer": "B", "worse": true, "what": "Altering the beverage container count to five.", "kind": "Visual Count Accuracy"}, {"answer": "B", "worse": true, "what": "Calculating a difference of one.", "kind": "Arithmetic Integration"}]}

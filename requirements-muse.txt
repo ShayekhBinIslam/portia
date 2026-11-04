@@ -1,0 +1,2 @@
+# the Muse Glimmer 30B server (scripts/serve_muse.sh): vLLM 0.32.0 (the version every result here used) has the muse_glimmer model, tool and reasoning parsers
+vllm==0.32.0

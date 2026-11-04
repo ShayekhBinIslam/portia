@@ -1,0 +1,5 @@
+# scripts/gpu_queue.py: investigator seeds on the development shards, in triples, and their Glimmer adjudications.
+
+first_seed: 20
+max_seed: 160                            # raised from 100 to keep GPUs 0 and 3 busy
+shards: {s3: shard3_15pct, s4: shard4_20pct}

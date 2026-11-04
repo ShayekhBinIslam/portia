@@ -1,0 +1,7 @@
+# list_videos: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: list_videos
+description: >-
+  Titles and ids of the videos in the library, to aim searches at the right video.
+parameters:
+  type: object
+  properties: {}

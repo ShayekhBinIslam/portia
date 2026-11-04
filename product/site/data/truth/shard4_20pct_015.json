@@ -1,0 +1,1 @@
+{"better": "B", "pair": "original vs edited", "changes": [{"answer": "A", "worse": true, "what": "Background texture hallucination", "kind": "Visual Detail Grounding"}, {"answer": "A", "worse": true, "what": "Marking detail alteration", "kind": "Visual Detail Grounding"}, {"answer": "A", "worse": true, "what": "Environment substitution", "kind": "Spatial Logic"}]}

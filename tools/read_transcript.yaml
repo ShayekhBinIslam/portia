@@ -1,0 +1,20 @@
+# read_transcript: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: read_transcript
+description: >-
+  Full speech transcript of the given segments, with up to 2 neighbouring segments on each side.
+parameters:
+  type: object
+  properties:
+    handles:
+      type: array
+      items:
+        type: string
+      minItems: 1
+      maxItems: 6
+    context:
+      type: integer
+      minimum: 0
+      maximum: 2
+      description: >-
+        Neighbouring 30-second segments to include before and after (default 0).
+  required: [handles]

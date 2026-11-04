@@ -1,0 +1,18 @@
+# search: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: search
+description: >-
+  Semantic search over 30-second segments of the video library (each segment's frames and speech are embedded together).
+  Returns the best-matching segments: handle, video title, time range, similarity and a transcript snippet. Prefer
+  several short, focused queries (one per hop, entity, event or claim) over one long query.
+parameters:
+  type: object
+  properties:
+    query:
+      type: string
+      description: What to look for, in plain words.
+    k:
+      type: integer
+      minimum: 1
+      maximum: 12
+      description: How many segments (default 8).
+  required: [query]

@@ -1,0 +1,1 @@
+{"better": "B", "pair": "original vs edited", "changes": [{"answer": "A", "worse": true, "what": "Label text substitution", "kind": "Visual Identification Accuracy"}, {"answer": "A", "worse": true, "what": "Consistency with speaker definitions", "kind": "Transcript-Parametric Plausibility"}]}

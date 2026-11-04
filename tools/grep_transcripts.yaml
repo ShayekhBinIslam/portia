@@ -1,0 +1,16 @@
+# grep_transcripts: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: grep_transcripts
+description: >-
+  Case-insensitive regular-expression search over the speech transcripts of every segment in the library. Best for
+  exact names, numbers, quotes or rare words an answer relies on.
+parameters:
+  type: object
+  properties:
+    pattern:
+      type: string
+      description: A regex or plain words, e.g. 'Mona Lisa|Gioconda'.
+    max_hits:
+      type: integer
+      minimum: 1
+      maximum: 20
+  required: [pattern]

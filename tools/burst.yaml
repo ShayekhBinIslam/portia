@@ -1,0 +1,20 @@
+# burst: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: burst
+description: >-
+  Look at a short stretch around ONE moment: 5 frames at t-2, t-1, t, t+1 and t+2 seconds in one image, each much
+  sharper than view_frames' thumbnails, optionally cropped to a region. Use it to count things, to see who or what
+  is where, and to follow people or objects that move or are partly hidden. Counts as one image.
+parameters:
+  type: object
+  properties:
+    video:
+      type: string
+      description: video id or a handle like VIDEOID@1230
+    t:
+      type: [string, number]
+      description: the middle moment, as mm:ss or seconds
+    region:
+      type: string
+      enum: [full, center, top, bottom, left, right, top-left, top-right, bottom-left, bottom-right]
+      description: Part of the frame (default full).
+  required: [video, t]

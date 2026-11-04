@@ -1,0 +1,14 @@
+# Portia's tuned investigator: judge/run.py --tools v4 --keep-reasoning --budget-note --final-full-reasoning
+# --max-tokens 16384, up to 8 turns. The track record on the Proof page was measured with these settings.
+
+investigator:
+  max_steps: 8
+  max_tokens: 16384
+  toolset: v4
+  keep_reasoning: true
+  budget_note: true
+  final_low: false
+
+quick:                                   # the "Quick" effort (6 turns, medium reasoning); TRACK_QUICK was measured with it
+  max_steps: 6
+  strength: medium

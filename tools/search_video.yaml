@@ -1,0 +1,19 @@
+# search_video: one tool the judge can call (OpenAI function schema). Loaded by judge/prompting.py.
+name: search_video
+description: >-
+  Semantic search inside ONE video: its 30-second segments that best match a description. Use it once you know which
+  video a hop is in but not the moment.
+parameters:
+  type: object
+  properties:
+    video:
+      type: string
+      description: An 11-character video id, or a segment handle 'id@seconds'.
+    query:
+      type: string
+    k:
+      type: integer
+      minimum: 1
+      maximum: 10
+      description: Segments to return (default 6).
+  required: [video, query]

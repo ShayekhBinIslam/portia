@@ -1,0 +1,20 @@
+### Two-hop question
+{{ question }}
+
+### Model A's answer
+{{ answer_a }}
+
+### Model B's answer
+{{ answer_b }}
+
+{% if diff is not none %}### Where the answers differ
+{{ diff }}
+
+{% if focus %}### Your assignment
+You are one of {{ focus_of }} investigators who split this contest. Check difference(s) {{ focus | join(', ') }} first and most carefully, at full resolution; the other investigators check the rest. Use any turns left on the other differences, and still give your verdict on the whole contest.
+
+{% endif %}{% endif %}### Library
+{{ n_playlists }} playlist(s) in this collection. Initial evidence (the segments that best match the {% if grounded %}question and the scenes both answers describe{% else %}question{% endif %}):
+{{ init }}
+
+You have at most {{ max_steps }} turns of tool use; then you must call `answer`.{% if parallel %} Several tool calls in one turn are allowed.{% endif %}

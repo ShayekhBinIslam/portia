@@ -1,0 +1,1 @@
+{"better": "B", "pair": "original vs edited", "changes": [{"answer": "A", "worse": true, "what": "Describing the interactive interface as dark-themed rather than light-themed.", "kind": "Factual Accuracy (Visual)"}, {"answer": "A", "worse": true, "what": "Hallucinating the rectangular shape of the intervention button.", "kind": "Factual Accuracy (Visual)"}]}
